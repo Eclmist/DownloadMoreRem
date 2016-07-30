@@ -12,6 +12,8 @@
 		
 		var percent = 0;
 		
+		$('.kawaii').css("visibility", "visible");
+		
 		var refreshIntervalId = setInterval(function(){ 
 			percent	+= 1;
 		
@@ -40,6 +42,7 @@
 			if (percent >= 100)
 			{
 				$('#funtxt').html("Extra Rem downloaded!");
+				$('.kawaii').css("visibility", "hidden");
 				clearInterval(refreshIntervalId);
 			}
 
