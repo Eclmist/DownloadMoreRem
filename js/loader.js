@@ -1,6 +1,6 @@
 (function($) {
     "use strict"; // Start of use strict
-
+	
 	$(function() {
         $(".dial").knob({
 			'angleOffset':-130,
@@ -9,12 +9,14 @@
     });
 	
 	$('#downloadBtn').get(0).onclick=function(){
-		
+				
 		var percent = 0;
+					
+		var refreshIntervalId;
 		
 		$('.kawaii').css("visibility", "visible");
 		
-		var refreshIntervalId = setInterval(function(){ 
+		refreshIntervalId = setInterval(function(){ 
 			percent	+= 1;
 		
 			$('.dial').val(percent).trigger('change');
@@ -43,6 +45,7 @@
 			{
 				$('#funtxt').html("Extra Rem downloaded!");
 				$('.kawaii').css("visibility", "hidden");
+				window.open('http://www.pixiv.net/search.php?s_mode=s_tag_full&word=Rem', '_blank');
 				clearInterval(refreshIntervalId);
 			}
 
