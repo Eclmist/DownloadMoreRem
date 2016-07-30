@@ -46,7 +46,7 @@
 				clearInterval(refreshIntervalId);
 			}
 
-			}, 300
+			}, 150
 		);
 	};
 
