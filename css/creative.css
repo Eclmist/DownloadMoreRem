@@ -451,6 +451,28 @@ body {
 	padding-top: 50px;
 }
 
+#wowsuchload
+{
+	position: absolute;
+	left: calc(50% - 100px);
+	
+}
+
+#downSection
+{
+	margin-top: 5em;
+}
+
+.kawaii
+{
+	width: 100px;
+}
+
+#downloadBtn
+{
+	clear: both;
+}
+
 @media (max-width: 400px) {
 	#mainNav {
 		padding-left: 0;
@@ -485,5 +507,15 @@ body {
 	.navbar-default .nav > li.active > a:focus {
 	  color: white !important;
 	  background-color: #1E9AC7;
+	}
+	
+	.kawaii
+	{
+		display: none;	
+	}
+	
+	#downloadBtn
+	{
+		margin-top: 15em;
 	}
 }
