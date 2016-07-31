@@ -45,7 +45,6 @@
 			{
 				$('#funtxt').html("Extra Rem downloaded!");
 				$('.kawaii').css("visibility", "hidden");
-				window.open('http://www.pixiv.net/search.php?s_mode=s_tag_full&word=Rem', '_blank');
 				clearInterval(refreshIntervalId);
 			}
 
