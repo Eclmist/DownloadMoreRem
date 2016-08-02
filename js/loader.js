@@ -1,3 +1,5 @@
+var refreshIntervalId;
+
 (function($) {
     "use strict"; // Start of use strict
 	
@@ -11,9 +13,9 @@
 	$('#downloadBtn').get(0).onclick=function(){
 				
 		var percent = 0;
-					
-		var refreshIntervalId;
-		
+							
+		clearInterval(refreshIntervalId);
+							
 		$('.kawaii').css("visibility", "visible");
 		
 		refreshIntervalId = setInterval(function(){ 
