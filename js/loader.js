@@ -1,4 +1,4 @@
-var refreshIntervalId;
+var downloadInProgress = false;
 
 (function($) {
     "use strict"; // Start of use strict
@@ -12,46 +12,52 @@ var refreshIntervalId;
 	
 	$('#downloadBtn').get(0).onclick=function(){
 				
-		var percent = 0;
-							
-		clearInterval(refreshIntervalId);
-							
-		$('.kawaii').css("visibility", "visible");
-		
-		refreshIntervalId = setInterval(function(){ 
-			percent	+= 1;
-		
-			$('.dial').val(percent).trigger('change');
-
-			if (percent >= 0)
-			{
-				$('#funtxt').html("Initializing Rem...");
-			}
-
-			if (percent >= 25)
-			{
-				$('#funtxt').html("Rewinding time...");
-			}
+		if (!downloadInProgress)
+		{
+			downloadInProgress = true;
 			
-			if (percent >= 50)
-			{
-				$('#funtxt').html("Retrieving lost memory...");
-			}
-
-			if (percent >= 75)
-			{
-				$('#funtxt').html("Almost there...");
-			}
-
-			if (percent >= 100)
-			{
-				$('#funtxt').html("Extra Rem downloaded!");
-				$('.kawaii').css("visibility", "hidden");
-				clearInterval(refreshIntervalId);
-			}
-
-			}, 150
-		);
+			var refreshIntervalId;
+	
+			var percent = 0;
+															
+			$('.kawaii').css("visibility", "visible");
+			
+			refreshIntervalId = setInterval(function(){ 
+				percent	+= 1;
+			
+				$('.dial').val(percent).trigger('change');
+	
+				if (percent >= 0)
+				{
+					$('#funtxt').html("Initializing Rem...");
+				}
+	
+				if (percent >= 25)
+				{
+					$('#funtxt').html("Rewinding time...");
+				}
+				
+				if (percent >= 50)
+				{
+					$('#funtxt').html("Retrieving lost memory...");
+				}
+	
+				if (percent >= 75)
+				{
+					$('#funtxt').html("Almost there...");
+				}
+	
+				if (percent >= 100)
+				{
+					$('#funtxt').html("Extra Rem downloaded!");
+					$('.kawaii').css("visibility", "hidden");
+					clearInterval(refreshIntervalId);
+					downloadInProgress = false;
+				}
+	
+				}, 150
+			);
+		}
 	};
 
 })(jQuery); // End of use strict
