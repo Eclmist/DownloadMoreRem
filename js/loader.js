@@ -7,6 +7,7 @@ var downloadInProgress = false;
         $(".dial").knob({
 			'angleOffset':-130,
 			'angleArc':260,
+        	'fgColor': '#ff8bac',
 		});
     });
 	
