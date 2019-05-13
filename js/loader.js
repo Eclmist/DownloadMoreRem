@@ -30,7 +30,7 @@ var downloadInProgress = false;
 	
 				if (percent >= 0)
 				{
-					$('#funtxt').html("Initializing Rem...");
+					$('#funtxt').html("Initializing Ram...");
 				}
 	
 				if (percent >= 25)
@@ -40,7 +40,7 @@ var downloadInProgress = false;
 				
 				if (percent >= 50)
 				{
-					$('#funtxt').html("Retrieving lost memory...");
+					$('#funtxt').html("Erasing Rem...");
 				}
 	
 				if (percent >= 75)
@@ -50,7 +50,7 @@ var downloadInProgress = false;
 	
 				if (percent >= 100)
 				{
-					$('#funtxt').html("Extra Rem downloaded!");
+					$('#funtxt').html("Extra Ram downloaded!");
 					$('.kawaii').css("visibility", "hidden");
 					clearInterval(refreshIntervalId);
 					downloadInProgress = false;
