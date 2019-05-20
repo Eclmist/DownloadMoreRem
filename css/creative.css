@@ -456,7 +456,7 @@ body {
 {
 	position: absolute;
 	left: calc(50% - 100px);
-	
+
 }
 
 #downSection
@@ -480,7 +480,7 @@ body {
 		padding-left: 0;
 		padding-right: 0;
 	}
-	
+
 }
 @media (max-width: 768px) {
   header .header-content .header-content-inner p {
@@ -490,7 +490,7 @@ body {
     margin-right: auto;
 	width: auto;
   }
-	
+
 	.navbar-default .nav > li > a,
 	.navbar-default .nav > li > a:focus {
 	  text-transform: uppercase;
@@ -499,23 +499,23 @@ body {
 	  color: #222222;
 	  background-color: white;
 	}
-	
+
 	.container-fluid>.navbar-collapse,
 	.container>.navbar-collapse {
 		margin-top: 10px;
 	}
-	
+
 	.navbar-default .nav > li.active > a,
 	.navbar-default .nav > li.active > a:focus {
 	  color: white !important;
 	  background-color: #1E9AC7;
 	}
-	
+
 	.kawaii
 	{
-		display: none;	
+		display: none;
 	}
-	
+
 	#downloadBtn
 	{
 		margin-top: 15em;
