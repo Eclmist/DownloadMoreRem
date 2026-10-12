@@ -51,6 +51,7 @@ var downloadInProgress = false;
 				{
 					$('#funtxt').html("Extra Rem downloaded!");
 					$('.kawaii').css("visibility", "hidden");
+					window.open('https://imgur.com/t/remrezero', '_blank');
 					clearInterval(refreshIntervalId);
 					downloadInProgress = false;
 				}
